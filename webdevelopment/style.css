@@ -1,8 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+}
 h1 {
     color: #1F3B5B;
     font-size: 40px;
 }
 p {
-    color: #4b688a;
+    color: #4B688A;
     font-size: 13px;
+}
+.hero {
+    position: relative;
+
+    background-image: url("images/hero.png");
+    background-size: cover;
+    background-position: center;
+
+    height: 500px;
+
+    display: flex;
+    /*align-items: center;
+    flex-direction: column;
+    justify-content: center;*/
+}
+.hero-text {
+    position: absolute;
+    top: 105px;
+}
+.hero-text h1,
+.hero-text h2,
+.hero-text p {
+    color: white;
+    max-width: 500px;
+    padding-left: 50px;
+}
+.hero-text h1 {
+    font-family: Montserrat;
+}
+.hero-text h2 {
+    font-family: Montserrat;
+    font-weight: 600;
+    max-width: fit-content;
+}
+.hero-text p {
+    font-family: Open Sans;
+}
+.hero-button {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+.hero-button {
+    padding: 12px 24px;
+    background-color: #E9EEF4;
+    font-family: Montserrat;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+}
+.hero-button a {
+    text-decoration: none;
+    color: #4B688A;
+}
+.hero-button:hover {
+    transform: scale(1.1); /* Scales up by 5% */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
