@@ -59,3 +59,14 @@ p {
 .hero-button:hover {
     transform: scale(1.1);
 }
+.image-credit {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: Open Sans;
+    color: #4B688A;
+    font-size: xx-small;
+}
+.image-credit a {
+    color: #4B688A;
+}
