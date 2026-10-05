@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    color: #1F3B5B;
+    font-size: 40px;
+}
+p {
+    color: #4B688A;
+    font-size: 13px;
+}
+.hero {
+    position: relative;
+    background-image: url("images/abouthero.png");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+.hero-text {
+    position: absolute;
+    top: 105px;
+}
+.hero-text h1,
+.hero-text h2,
+.hero-text p {
+    color: white;
+    max-width: 500px;
+    padding-left: 50px;
+}
+.hero-text h1 {
+    font-family: Montserrat;
+}
+.hero-text h2 {
+    font-family: Montserrat;
+    font-weight: 600;
+    max-width: fit-content;
+}
+.hero-text p {
+    font-family: Open Sans;
+}
+.hero-button {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    padding: 12px 24px;
+    background-color: #E9EEF4;
+    font-family: Montserrat;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+.hero-button a {
+    text-decoration: none;
+    color: #4B688A;
+}
+.hero-button:hover {
+    transform: scale(1.1);
+}
+.image-credit {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: Open Sans;
+    color: #4B688A;
+    font-size: xx-small;
+}
+.image-credit a {
+    color: #4B688A;
+}
+.resume-button {
+    display: inline-block;
+    margin-left: 30px;
+    padding: 12px 24px;
+    background-color: #E9EEF4;
+    font-family: Montserrat;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    /*border: 3px solid #1F3B5B;*/
+    /*Using box-shadow instead of border property because 
+    I want the inner courners to also be rounded*/
+    box-shadow: 0 0 0 3px #1F3B5B;
+}
+.resume-button:hover {
+    transform: scale(1.1);
+}
+.resume-button a {
+    text-decoration: none;
+    color:#4B688A;
+}
