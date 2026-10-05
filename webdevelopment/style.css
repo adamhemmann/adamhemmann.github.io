@@ -43,14 +43,13 @@ p {
     position: absolute;
     bottom: 50px;
     left: 50px;
-}
-.hero-button {
     padding: 12px 24px;
     background-color: #E9EEF4;
     font-family: Montserrat;
     font-weight: bold;
     border-radius: 4px;
     transition: transform 0.2s ease;
+    cursor: pointer;
 }
 .hero-button a {
     text-decoration: none;
@@ -69,4 +68,26 @@ p {
 }
 .image-credit a {
     color: #4B688A;
+}
+.resume-button {
+    display: inline-block;
+    margin-left: 30px;
+    padding: 12px 24px;
+    background-color: #E9EEF4;
+    font-family: Montserrat;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    /*border: 3px solid #1F3B5B;*/
+    /*Using box-shadow instead of border property because 
+    I want the inner courners to also be rounded*/
+    box-shadow: 0 0 0 3px #1F3B5B;
+}
+.resume-button:hover {
+    transform: scale(1.1);
+}
+.resume-button a {
+    text-decoration: none;
+    color:#4B688A;
 }
