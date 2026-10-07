@@ -71,7 +71,7 @@ p {
 }
 .resume-button {
     display: inline-block;
-    margin-left: 30px;
+    margin: 10px 30px 20px;
     padding: 12px 24px;
     background-color: #E9EEF4;
     font-family: Montserrat;
