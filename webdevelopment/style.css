@@ -79,10 +79,8 @@ p {
     border-radius: 4px;
     transition: transform 0.2s ease;
     cursor: pointer;
-    /*border: 3px solid #1F3B5B;*/
-    /*Using box-shadow instead of border property because 
-    I want the inner courners to also be rounded*/
-    box-shadow: 0 0 0 3px #1F3B5B;
+    border: 3px solid #1F3B5B;
+    /*box-shadow: 0 0 0 3px #1F3B5B;*/
 }
 .resume-button:hover {
     transform: scale(1.1);
