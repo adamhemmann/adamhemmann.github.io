@@ -11,22 +11,33 @@ p {
     font-size: 13px;
 }
 .hero {
-    position: relative;
+    display: flex;
     background-image: url("images/abouthero.png");
     background-size: cover;
     background-position: center;
     height: 500px;
 }
+.reflect-hero {
+    display: flex;
+    background-image: url("images/reflectionhero.png");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+/*Slightly edit the alignment of only the hero text on my Reflection page*/
+.reflect-hero .hero-text {
+    align-self: center;
+    margin-top: -50px;
+}
 .hero-text {
-    position: absolute;
-    top: 105px;
+    margin-top: 100px;
+    margin-left: 50px;
 }
 .hero-text h1,
 .hero-text h2,
 .hero-text p {
     color: white;
     max-width: 500px;
-    padding-left: 50px;
 }
 .hero-text h1,
 .hero-text h2 {
@@ -40,10 +51,9 @@ p {
     font-family: Open Sans;
 }
 .hero-button {
-    position: absolute;
-    bottom: 50px;
-    left: 50px;
+    margin-top: 50px;
     padding: 12px 24px;
+    width: 100px;
     background-color: #FFFFFF;
     font-family: Montserrat;
     font-weight: bold;
@@ -59,12 +69,11 @@ p {
     transform: scale(1.1);
 }
 .image-credit {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
     font-family: Open Sans;
     color: #4B688A;
     font-size: xx-small;
+    align-self: flex-end;
+    margin-left: auto;
 }
 .image-credit a {
     color: #4B688A;
@@ -80,7 +89,6 @@ p {
     transition: transform 0.2s ease;
     cursor: pointer;
     border: 3px solid #1F3B5B;
-    /*box-shadow: 0 0 0 3px #1F3B5B;*/
 }
 .resume-button:hover {
     transform: scale(1.1);
@@ -88,4 +96,31 @@ p {
 .resume-button a {
     text-decoration: none;
     color:#4B688A;
+}
+/*Begin styles for personal reflection container on reflection.html*/
+.personal-reflection-container {
+    margin: 30px 60px;
+}
+.personal-reflection-container h1 {
+    color: #1F3B5B;
+    font-family: Montserrat;
+    margin-top: 20px;
+    font-size: 30px;
+}
+.personal-reflection-container p {
+    color: #4B688A;
+    font-family: Open Sans;
+    margin-top: -20px;
+}
+/*pseudo-classes/elements*/
+.personal-reflection-container p::first-letter {
+    font-size: 250%;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+.personal-reflection-container p:nth-of-type(even) {
+    text-indent: 1em;
+}
+.personal-reflection-container p:nth-of-type(odd) {
+    text-indent: 2em;
 }
