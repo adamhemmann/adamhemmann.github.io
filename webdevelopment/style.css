@@ -99,28 +99,33 @@ p {
 }
 /*Begin styles for personal reflection container on reflection.html*/
 .personal-reflection-container {
-    margin: 30px 60px;
+    margin: 30px 150px;
+    display: flex;
+    flex-direction: column;
 }
 .personal-reflection-container h1 {
     color: #1F3B5B;
     font-family: Montserrat;
-    margin-top: 20px;
-    font-size: 30px;
+    font-size: 20px;
+    align-self: center;
+    margin: 0;
 }
 .personal-reflection-container p {
     color: #4B688A;
     font-family: Open Sans;
-    margin-top: -20px;
+    margin-top: 10px;
 }
 /*pseudo-classes/elements*/
-.personal-reflection-container p::first-letter {
+.personal-reflection-container p:first-of-type {
+    margin-top: -10px;
+}
+.personal-reflection-container p:first-of-type::first-letter {
     font-size: 250%;
     font-family: Montserrat;
     font-weight: 600;
 }
-.personal-reflection-container p:nth-of-type(even) {
-    text-indent: 1em;
-}
-.personal-reflection-container p:nth-of-type(odd) {
+.personal-reflection-container p:nth-of-type(2),
+.personal-reflection-container p:nth-of-type(3),
+.personal-reflection-container p:nth-of-type(4) {
     text-indent: 2em;
 }
