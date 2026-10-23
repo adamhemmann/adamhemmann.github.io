@@ -78,25 +78,6 @@ p {
 .image-credit a {
     color: #4B688A;
 }
-.resume-button {
-    display: inline-block;
-    margin: 10px 30px 20px;
-    padding: 12px 24px;
-    background-color: #E9EEF4;
-    font-family: Montserrat;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: transform 0.2s ease;
-    cursor: pointer;
-    border: 3px solid #1F3B5B;
-}
-.resume-button:hover {
-    transform: scale(1.1);
-}
-.resume-button a {
-    text-decoration: none;
-    color:#4B688A;
-}
 /*Begin styles for personal reflection container on reflection.html*/
 .personal-reflection-container {
     margin: 30px 150px;
@@ -128,4 +109,63 @@ p {
 .personal-reflection-container p:nth-of-type(3),
 .personal-reflection-container p:nth-of-type(4) {
     text-indent: 2em;
+}
+/* Begin about.html styles */
+.about-headshot {
+    border-radius: 8px;
+    border: 3px solid #1F3B5B;
+    margin-left: -300px;
+    
+}
+.bio-container {
+    background-color: #E9EEF4;
+    padding: 20px 0;
+}
+.bio-container,
+.career-overview-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 10px;
+}
+.bio-paragraph h1,
+.career-overview-content h1 {
+    font-family: Montserrat;
+}
+.bio-paragraph p,
+.career-overview-content p {
+    font-family: Open Sans;
+}
+.bio-paragraph p,
+.career-overview-content p {
+    width: 600px;
+    margin: 0;
+}
+.resume-button {
+    width: 190px;
+    height: 20px;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #E9EEF4;
+    font-family: Montserrat;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    border: 3px solid #1F3B5B;
+    align-self: center;
+}
+.resume-button:hover {
+    transform: scale(1.1);
+}
+.resume-button a {
+    text-decoration: none;
+    color:#4B688A;
+}
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.career-overview-container {
+    margin: 30px 200px;
 }
