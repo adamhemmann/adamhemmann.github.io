@@ -218,7 +218,6 @@ p {
     .vertical-container {
         display: none;
     }
-
     /* Remove screen-specific layout */
     .bio-container,
     .career-overview-container {
