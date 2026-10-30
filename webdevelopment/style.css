@@ -264,6 +264,10 @@ p {
         font-size: 10pt;
         font-family: serif;
     }
+    .footer p {
+        color: black;
+        font-family: serif;
+    }
     .footer img {
         display: none;
     }
