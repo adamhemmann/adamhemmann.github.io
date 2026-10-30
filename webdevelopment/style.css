@@ -212,66 +212,79 @@ p {
 }
 /* Print queries */
 @media print {
-    /* Hide elements that should not print */
+    /* Hide elements that should not print for all pages */
     header,
+    .image-credit,
     .about-headshot,
-    .vertical-container {
+    .vertical-container,
+    .footer-date,
+    .footer img {
         display: none;
     }
-    /* Remove screen-specific layout */
-    .bio-container,
-    .career-overview-container {
-        display: block;
-        margin: 0;
-        padding: 0;
-        background-color: white;
-    }
-    /* Make text appropriate for printing */
-    .print-name {
-        display: block;
-    }
-    .print-name h1 {
-        color: black;
-    }
-    .bio-content h1,
-    .career-overview-content h1 {
-        width: auto;
-        color: black;
-        font-size: 14pt;
-        font-family: serif;
-    }
-    .bio-content p,
-    .career-overview-content p {
-        width: auto;
-        color: black;
-        font-size: 10pt;
-        font-family: serif;
-    }
-    .career-overview-list h2,
-    .career-overview-list li {
-        width: auto;
-        color: black;
-        font-size: 14pt;
-        font-family: serif;
-    }
-    .career-overview-list ul,
-    .career-overview-list li {
-        padding: 0;
-        margin: 0;
-    }
-    .career-overview-list li {
-        color: black;
-        font-size: 10pt;
-        font-family: serif;
-    }
+    /* Begin print query styles for footer */
     .footer p {
         color: black;
         font-family: serif;
     }
-    .footer img {
-        display: none;
+    /* Begin print query styles for about.html */
+    .about-page {
+        /* Remove screen-specific layout */
+        .bio-container,
+        .career-overview-container {
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        /* Make text appropriate for printing */
+        .print-name {
+            display: block;
+        }
+        .print-name h1 {
+            color: black;
+        }
+        .bio-content h1,
+        .career-overview-content h1 {
+            width: auto;
+            color: black;
+            font-size: 14pt;
+            font-family: serif;
+        }
+        .bio-content p,
+        .career-overview-content p {
+            width: auto;
+            color: black;
+            font-size: 10pt;
+            font-family: serif;
+        }
+        .career-overview-list h2,
+        .career-overview-list li {
+            width: auto;
+            color: black;
+            font-size: 14pt;
+            font-family: serif;
+        }
+        .career-overview-list ul,
+        .career-overview-list li {
+            padding: 0;
+            margin: 0;
+        }
+        .career-overview-list li {
+            color: black;
+            font-size: 10pt;
+            font-family: serif;
+        }
     }
-    .footer-date {
-        display: none;
+    /* Begin print query styles for index.html */
+    .index-page {
+        .index-hero {
+            background-image: none;
+        }
+    }
+    /* Begin print query styles for reflection.html */
+    .reflection-page {
+        .reflect-hero {
+            background-image: none;
+        }
     }
 }
