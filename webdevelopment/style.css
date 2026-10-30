@@ -218,12 +218,7 @@ p {
     .vertical-container {
         display: none;
     }
-    .print-name {
-        display: block;
-    }
-    .print-name h1 {
-        color: black;
-    }
+
     /* Remove screen-specific layout */
     .bio-container,
     .career-overview-container {
@@ -233,6 +228,12 @@ p {
         background-color: white;
     }
     /* Make text appropriate for printing */
+    .print-name {
+        display: block;
+    }
+    .print-name h1 {
+        color: black;
+    }
     .bio-content h1,
     .career-overview-content h1 {
         width: auto;
