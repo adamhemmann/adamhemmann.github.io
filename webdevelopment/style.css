@@ -10,7 +10,8 @@ p {
     color: #4B688A;
     font-size: 13px;
 }
-.hero {
+/* index.html styles */
+.index-hero {
     display: flex;
     background-image: url("images/abouthero.png");
     background-size: cover;
@@ -23,6 +24,20 @@ p {
     background-size: cover;
     background-position: center;
     height: 500px;
+}
+.fav-quote-container {
+    display: flex;
+    height: 200px;
+    background-color: #E9EEF4;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.fav-quote-container blockquote p {
+    font-family: Open Sans;
+    font-size: x-large;
+    font-style: italic;
+    color: #1F3B5B;
 }
 /*Slightly edit the alignment of only the hero text on my Reflection page*/
 .reflect-hero .hero-text {
@@ -111,10 +126,14 @@ p {
     text-indent: 2em;
 }
 /* Begin about.html styles */
+.print-name {
+    display: none;
+}
 .about-headshot {
     border-radius: 8px;
     border: 3px solid #1F3B5B;
-    margin-left: -300px;    
+    margin-left: -300px;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);    
 }
 .bio-container {
     background-color: #E9EEF4;
@@ -126,15 +145,15 @@ p {
     justify-content: space-around;
     margin: 30px 10px;
 }
-.bio-paragraph h1,
+.bio-content h1,
 .career-overview-content h1 {
     font-family: Montserrat;
 }
-.bio-paragraph p,
+.bio-content p,
 .career-overview-content p {
     font-family: Open Sans;
 }
-.bio-paragraph p,
+.bio-content p,
 .career-overview-content p {
     width: 600px;
     margin: 0;
@@ -167,4 +186,88 @@ p {
 }
 .career-overview-container {
     margin: 30px 200px;
+}
+.career-overview-list h2 {
+    font-family: Montserrat;
+    color: #1F3B5B;
+}
+.career-overview-list ul {
+    margin-top: 50px;
+    list-style-type: square;
+}
+.career-overview-list li {
+    font-family: Open Sans;
+    color:#4B688A;
+    padding: 20px 0;
+}
+/* Begin footer styles */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    font-family: Open Sans, sans-serif;
+    /*placeholder color*/
+    /*background-color: #4B688A;*/
+    background-image: url("images/careerhero.png");
+}
+/* Print queries */
+@media print {
+    /* Hide elements that should not print */
+    header,
+    .about-headshot,
+    .vertical-container {
+        display: none;
+    }
+    .print-name {
+        display: block;
+    }
+    .print-name h1 {
+        color: black;
+    }
+    /* Remove screen-specific layout */
+    .bio-container,
+    .career-overview-container {
+        display: block;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+    }
+    /* Make text appropriate for printing */
+    .bio-content h1,
+    .career-overview-content h1 {
+        width: auto;
+        color: black;
+        font-size: 14pt;
+        font-family: serif;
+    }
+    .bio-content p,
+    .career-overview-content p {
+        width: auto;
+        color: black;
+        font-size: 10pt;
+        font-family: serif;
+    }
+    .career-overview-list h2,
+    .career-overview-list li {
+        width: auto;
+        color: black;
+        font-size: 14pt;
+        font-family: serif;
+    }
+    .career-overview-list ul,
+    .career-overview-list li {
+        padding: 0;
+        margin: 0;
+    }
+    .career-overview-list li {
+        color: black;
+        font-size: 10pt;
+        font-family: serif;
+    }
+    .footer img {
+        display: none;
+    }
+    .footer-date {
+        display: none;
+    }
 }
