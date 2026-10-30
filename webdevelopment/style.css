@@ -212,6 +212,10 @@ p {
 }
 /* Print queries */
 @media print {
+    /* Ensure all pages will print with 1in margins */
+    @page {
+            margin: 1in;
+    }
     /* Hide elements that should not print for all pages */
     header,
     .image-credit,
