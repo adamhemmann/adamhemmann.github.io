@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+    Name:
+    Date:
+    Course:
+    Description:
+    -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact</title>
+        <!-- Link to external CSS files -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="nav.css">
+        <!-- Links to fonts Montserrat and Open Sans from Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    </head>
+    <body>
+        <div class="page-container">
+            <header>
+                <!-- Top navigation bar -->     
+                <nav class="nav-bar">
+                    <div class="nav-logo"><img src="images/logoTransparent.png" alt="Logo" width="90" height="90"></div>
+                    <ul class="nav-list">
+                        <li class="nav-link"><a href="index.html">Home</a></li>
+                        <li class="nav-link"><a href="about.html">About</a></li>
+                        <li class="nav-link"><a href="#career">Career ▽</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="#item1">Item 1</a></li>
+                                <li><a href="#item2">Item 2</a></li>
+                                <li><a href="#item3">Item 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-link"><a href="reflection.html">Reflection</a></li>
+                        <li class="nav-link"><a href="contact.html"><strong>Contact</strong></a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- Main page content will go here -->
+            <main class="main-content">
+            <div class="contact-page-content">
+                <div class="quick-contact-info-container">
+                    <p>Email</p>
+                    <p>adam.hemmann@gmail.com</p>
+                    <p>Phone</p>
+                    <p>573-123-4567</p>
+                    <p>Location</p>
+                    <p>Columbia, MO</p>
+                </div>
+                <div class="contact-form-container">
+                    <form action="mailto:adam.hemmann@gmail.com?Subject=Contact%20Form" method="post" enctype="text/plain" class="contact-form">
+                        <h1 class="contact-form-title">Send me a message!</h1>
+                        <p class="form-required-label">*All fields are required</p>
+                        <div class="form-row-names">
+                        <label for="form-name-prefix">Prefix: </label>
+                        <select name="form-name-prefix" id="form-name-prefix" required>
+                            <option value="" disabled selected>Select a prefix</option>
+                            <option value="Mr">Mr.</option>
+                            <option value="Ms">Ms.</option>
+                            <option value="Mrs">Mrs.</option>
+                            <option value="Dr">Dr.</option>
+                            <option value="Prof">Prof.</option>
+                            <option value="Rev">Rev.</option>
+                            <option value="Fr">Fr.</option>
+                            <option value="Hon">Hon.</option>
+                            <option value="Atty">Atty.</option>
+                        </select>
+                        
+                        <label for="form-firstname">First name: </label>
+                        <input type="text" id="form-firstname" name="form-firstname" placeholder="First name" required>
+
+                        <label for="form-lastname">Last name: </label>
+                        <input type="text" id="form-lastname" name="form-lastname" placeholder="Last name" required>
+                        </div>
+
+                        <div class="form-row-email">
+                        <label for="form-email">Email address: </label>
+                        <input type="email" id="form-email" name="form-email" 
+                        placeholder="Email address" required>
+                        </div>
+
+                        <div class="form-row-message">
+                        <label for="form-message">Message: </label>
+                        <textarea id="form-message" name="form-message" placeholder="Placeholder" rows="15" cols="50" required></textarea>
+                        </div>
+
+                        <div class="form-row-howfind">
+                        <p class="form-radio-label">How did you find me?</p>
+                            <input type="radio" id="facebook" name="how-find-question" value="Facebook" required>
+                            <label for="facebook">Facebook</label>
+                            <input type="radio" id="linkedin" name="how-find-question" value="LinkedIn" required>
+                            <label for="linkedin">LinkedIn</label>
+                            <input type="radio" id="other" name="how-find-question" value="Other" required>
+                            <label for="other">Other</label>
+                        </div>
+
+                        <div class="form-row-submit">
+                            <input type="submit" value="Submit">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            </main>
+            <!-- Page footer -->
+            <footer class="footer">
+                <p class="footer-email"><img src="images/icons8-email-50.png" width="20" height="20" title="Icon from icons8.com"> ashgx6@mail.missouri.edu</p>
+                <p class="footer-phone"><img src="images/icons8-phone-50.png" width="20" height="20" title="Icon from icons8.com"> (573) 123-4567</p>
+                <p class="footer-date">Date: 9/17/2026</p>
+            </footer>
+        </div>
+    </body>
+</html>

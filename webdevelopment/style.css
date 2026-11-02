@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 h1 {
     color: #1F3B5B;
@@ -9,6 +10,17 @@ h1 {
 p {
     color: #4B688A;
     font-size: 13px;
+}
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 /* index.html styles */
 .index-hero {
@@ -207,8 +219,67 @@ p {
     padding: 0 15px;
     font-family: Open Sans, sans-serif;
     /*placeholder color*/
-    /*background-color: #4B688A;*/
-    background-image: url("images/careerhero.png");
+    background-color: #4B688A;
+    /* background-image: url("images/careerhero.png"); */
+}
+.footer p {
+    color: #E9EEF4;
+}
+/* Begin contact.html styles */
+.contact-page-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+}
+.quick-contact-info-container {
+   font-family: Open Sans, sans-serif;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+}
+.quick-contact-info-container p {
+    color: #1F3B5B;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.quick-contact-info-container p:nth-of-type(even) {
+    text-indent: 2em;
+    font-weight: 400;
+}
+.contact-form-container {
+    min-height: 500px;
+    background-color: #E9EEF4;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-form-container h1 {
+    font-family: Montserrat, sans-serif;
+}
+.contact-form-container label,
+.contact-form-container p {
+    font-family: Open Sans,sans-serif;
+}
+.contact-form {
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-radio-label {
+    text-align: center;
+    color: #ff4d4d;
+}
+/* All required form fields will have a red border */
+input:required,
+textarea:required,
+select:required {
+  border: 2px solid #ff4d4d;
+}
+.form-required-label {
+    color: #ff4d4d;
 }
 /* Print queries */
 @media print {
