@@ -1,7 +1,18 @@
+html {
+    font-size: 62.5%;
+}
 body {
     margin: 0;
     padding: 0;
     height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
 }
 h1 {
     color: #1F3B5B;
@@ -11,54 +22,30 @@ p {
     color: #4B688A;
     font-size: 13px;
 }
-.page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100dvh;
-}
-.main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 /* index.html styles */
 .index-hero {
     display: flex;
-    background-image: url("images/abouthero.png");
+    background-image: 
+        linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(31, 59, 91, 0.9) 100%),
+        url("images/abouthero.png");
+    /* background-image: url("images/abouthero.png"); */
     background-size: cover;
     background-position: center;
-    height: 500px;
+    min-height: 35rem;
+    padding-top: 10rem;
+    padding-left: 5rem;
 }
 .reflect-hero {
     display: flex;
-    background-image: url("images/reflectionhero.png");
+    background-image: 
+        linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(31, 59, 91, 0.9) 100%),
+        url("images/reflectionhero.png");
+    /* background-image: url("images/reflectionhero.png"); */
     background-size: cover;
     background-position: center;
-    height: 500px;
-}
-.fav-quote-container {
-    display: flex;
-    height: 200px;
-    background-color: #E9EEF4;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.fav-quote-container blockquote p {
-    font-family: Open Sans;
-    font-size: x-large;
-    font-style: italic;
-    color: #1F3B5B;
-}
-/*Slightly edit the alignment of only the hero text on my Reflection page*/
-.reflect-hero .hero-text {
-    align-self: center;
-    margin-top: -50px;
-}
-.hero-text {
-    margin-top: 100px;
-    margin-left: 50px;
+    min-height: 35rem;
+    padding-top: 10rem;
+    padding-left: 5rem;
 }
 .hero-text h1,
 .hero-text h2,
@@ -78,11 +65,15 @@ p {
     font-family: Open Sans;
 }
 .hero-button {
-    margin-top: 50px;
-    padding: 12px 24px;
-    width: 100px;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 2.4rem;
+    width: 10rem;
     background-color: #FFFFFF;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-weight: bold;
     border-radius: 4px;
     transition: transform 0.2s ease;
@@ -101,29 +92,63 @@ p {
     font-size: xx-small;
     align-self: flex-end;
     margin-left: auto;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
 }
 .image-credit a {
     color: #4B688A;
 }
-/*Begin styles for personal reflection container on reflection.html*/
+.fav-quote-container {
+    display: flex;
+    height: 20rem;
+    background-color: #E9EEF4;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.fav-quote-container blockquote p {
+    font-family: Open Sans;
+    font-size: x-large;
+    font-style: italic;
+    color: #1F3B5B;
+}
+.goals-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 3rem;
+    font-family: Open Sans, sans-serif;
+}
+.goals-container p {
+    font-size: 1.6rem;
+}
+/*Begin styles for reflection.html*/
+    /*Slightly edit the alignment of only the hero text on my Reflection page*/
+.reflect-hero .hero-text {
+    align-self: center;
+    margin-top: -50px;
+}
 .personal-reflection-container {
-    margin: 30px 150px;
+    margin: 3rem 15rem;
     display: flex;
     flex-direction: column;
 }
 .personal-reflection-container h1 {
     color: #1F3B5B;
     font-family: Montserrat;
-    font-size: 20px;
+    font-size: 2rem;
     align-self: center;
     margin: 0;
 }
 .personal-reflection-container p {
     color: #4B688A;
     font-family: Open Sans;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
-/*pseudo-classes/elements*/
+    /*pseudo-classes/elements*/
 .personal-reflection-container p:first-of-type {
     margin-top: -10px;
 }
@@ -137,44 +162,101 @@ p {
 .personal-reflection-container p:nth-of-type(4) {
     text-indent: 2em;
 }
+
 /* Begin about.html styles */
+.about-page-grid {
+    display: grid;
+    width: 100%;
+}
 .print-name {
     display: none;
 }
-.about-headshot {
-    border-radius: 8px;
-    border: 3px solid #1F3B5B;
-    margin-left: -300px;
-    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);    
-}
 .bio-container {
+    /* Grid container */
+    width: 100%;
+    display: grid;
+    gap: 3rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 600px));
+    justify-content: center;
     background-color: #E9EEF4;
-    padding: 20px 0;
+    padding: 3rem 0;
 }
-.bio-container,
-.career-overview-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 30px 10px;
+.bio-content {
+    /* padding: 2rem; */
+    margin: auto auto;
+}
+.career-overview-content {
+    margin: auto auto;
 }
 .bio-content h1,
 .career-overview-content h1 {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
 }
 .bio-content p,
 .career-overview-content p {
-    font-family: Open Sans;
-}
-.bio-content p,
-.career-overview-content p {
-    width: 600px;
+    font-family: Open Sans, sans-serif;
+    max-width: 60rem;
     margin: 0;
+    text-indent: 2em;
+}
+.about-headshot-container {
+    margin: auto auto;
+}
+.about-headshot {
+    margin: auto auto;
+    border-radius: .8rem;
+    border: 3px solid #1F3B5B;
+    box-shadow: .5rem .5rem 1.5rem 0 rgba(0, 0, 0, 0.3);
+    width: 150px;
+    height: 150px;
+}
+/* Media queries to change image size based on screen size */
+@media screen and (min-width: 600px) {
+    .about-headshot {
+        width: 250px;
+        height: 250px;
+    }
+}
+@media screen and (min-width: 1235px) {
+    .about-headshot {
+        width: 400px;
+        height: 400px;
+    }
+}
+.career-overview-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 500px));
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+}
+.about-media-container {
+    display: grid;
+    min-height: 30rem;
+    gap: 2rem;
+    place-items: center;
+}
+.about-video {
+    width: 100%;
+}
+@media screen and (min-width: 600px) {
+    .about-video {
+        width: 75%;
+    }
+}
+@media screen and (min-width: 1235px) {
+    .about-video {
+        width: 75%;
+    }
 }
 .resume-button {
-    width: 190px;
-    height: 20px;
-    display: inline-block;
-    padding: 12px 24px;
+    width: 19rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 2.4rem;
     background-color: #E9EEF4;
     font-family: Montserrat;
     font-weight: bold;
@@ -183,6 +265,7 @@ p {
     cursor: pointer;
     border: 3px solid #1F3B5B;
     align-self: center;
+    margin: auto auto;
 }
 .resume-button:hover {
     transform: scale(1.1);
@@ -191,20 +274,15 @@ p {
     text-decoration: none;
     color:#4B688A;
 }
-.vertical-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.career-overview-container {
-    margin: 30px 200px;
+.career-overview-list-container {
+    margin: auto auto;
 }
 .career-overview-list h2 {
     font-family: Montserrat;
     color: #1F3B5B;
 }
 .career-overview-list ul {
-    margin-top: 50px;
+    margin-top: 2rem;
     list-style-type: square;
 }
 .career-overview-list li {
@@ -212,30 +290,32 @@ p {
     color:#4B688A;
     padding: 20px 0;
 }
-/* Begin footer styles */
-.footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 15px;
-    font-family: Open Sans, sans-serif;
-    /*placeholder color*/
-    background-color: #4B688A;
-    /* background-image: url("images/careerhero.png"); */
-}
-.footer p {
-    color: #E9EEF4;
-}
+
 /* Begin contact.html styles */
-.contact-page-content {
-    flex: 1;
+.contact-page-hero {
     display: flex;
+    background-image: 
+        linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(31, 59, 91, 0.9) 100%),
+        url("images/contacthero.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 40rem;
+    padding-top: 10rem;
+    padding-left: 5rem;
+}
+.contact-page-content {
+    /* flex: 1; */
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
 }
 .quick-contact-info-container {
    font-family: Open Sans, sans-serif;
    display: flex;
    flex-direction: column;
-   justify-content: space-around;
+   justify-content: space-between;
+   padding: 2rem 2rem;
 }
 .quick-contact-info-container p {
     color: #1F3B5B;
@@ -249,7 +329,7 @@ p {
 .contact-form-container {
     min-height: 500px;
     background-color: #E9EEF4;
-    padding: 0 2rem;
+    padding: 2rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -280,6 +360,31 @@ select:required {
 }
 .form-required-label {
     color: #ff4d4d;
+}
+
+/* Begin footer styles */
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 0 1.5rem; */
+    font-family: Open Sans, sans-serif;
+    background-color: #4B688A;
+    /* background-image: url("images/careerhero.png"); */
+    /* position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; */
+}
+.footer div {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #E9EEF4;
+    margin: 1rem 1.5rem;
+}
+.footer div img {
+    padding-right: 1rem;
 }
 /* Print queries */
 @media print {

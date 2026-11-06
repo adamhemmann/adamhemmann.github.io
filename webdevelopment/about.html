@@ -2,7 +2,7 @@
 <html lang="en">
     <!--
     Name: Adam Hemmann
-    Date: 9/17/2026
+    Date: 11/5/2026
     Course: ISLT 4355
     Description: Resume website About page
     -->
@@ -41,50 +41,56 @@
                 </ul>
             </nav>
         </header>
-        <!-- Name to be displayed only when printing -->
-        <div class="print-name">
-            <h1>Adam Hemmann</h1>
-        </div>
-        <!-- Biography Paragraph -->
-        <div class="bio-container">
-            <div class="bio-content">
-                <h1>About Me</h1>
-                <p>My name is Adam Hemmann. I was born in Columbia, Missouri, and still live there with my family. For the past 15 years I have worked for an online printing company called Mpix where I currently serve as the purchasing and inventory manager. Working full time, raising a family, and being enrolled part time in school does not leave a ton of free time. That is not a complaint, though; I amfortunate to have such a full life. When I do have some free time, I usually like to spend it reading, going to my son's baseball games, or running. My wife and I are currently training for a half marathon in November. I am proud of the fact that I am able to balance a career, family, and continuing my education while working toward my long-term educational and professional goals.</p>
+        <main class="about-page-grid">
+            <!-- Name to be displayed only when printing -->
+            <div class="print-name">
+                <h1>Adam Hemmann</h1>
             </div>
-            <img class="about-headshot" src="images/headshotWeb.jpg" alt="Headshot" width="306" height="323">
-        </div>
-        <!-- Career Overview -->
-        <div class="career-overview-container">
-            <div class="vertical-container">
-                <!-- Biography video -->
-                <video width="400" controls>
-                    <source src="images/HemmannResumeVideo.mp4" type="video/mp4">Your browser does not support the video tag.
-                </video>
-                <!-- Resume download button -->
-                <div class="resume-button">
-                    <a href="images/HemmannResume.pdf">Download my Resume</a>
+            <!-- Biography Paragraph -->
+            <div class="bio-container">
+                <div class="bio-content">
+                    <h1>About Me</h1>
+                    <p>My name is Adam Hemmann. I was born in Columbia, Missouri, and still live there with my family. For the past 15 years I have worked for an online printing company called Mpix where I currently serve as the purchasing and inventory manager. Working full time, raising a family, and being enrolled part time in school does not leave a ton of free time. That is not a complaint, though; I amfortunate to have such a full life. When I do have some free time, I usually like to spend it reading, going to my son's baseball games, or running. My wife and I are currently training for a half marathon in November. I am proud of the fact that I am able to balance a career, family, and continuing my education while working toward my long-term educational and professional goals.</p>
+                </div>
+                <div class="about-headshot-container">
+                    <img class="about-headshot" src="images/headshotWeb.jpg" alt="Headshot" width="306" height="323">
                 </div>
             </div>
-            <div class="career-overview-content">
-                <h1>Career Overview</h1>
-                <p>I began my career at Miller's Professional Imaging in Columbia, Missouri as a seasonal production team member in August 2011, working in the Print Finishing Department. If I'm being honest, I initially took the job primarily because it offered health insurance, and I was about to lose coverage under my parents' plan after turning 26. What began as a practical decision, however, turned into a long-term career with opportunities for growth and advancement.</p>
-                <p>After nearly four years with the company, I received my first promotion to Finish Department Lead in July 2015. Serving as a department lead opened my eyes to what it means to manage and lead a team while also giving me my first experience managing product inventory. In February 2020, I was promoted to Warehouse Manager, a role that significantly expanded my responsibilities from managing inventory for a single department to overseeing product inventory across the company. Two years later, in February 2022, I was promoted to my current role as Purchasing Manager.</p>
+            <!-- Career Overview -->
+            <div class="career-overview-container">
+                <div class="about-media-container">
+                    <!-- Biography video -->
+                    <video class="about-video" controls>
+                        <source src="images/HemmannResumeVideo.mp4" type="video/mp4">Your browser does not support the video tag.
+                    </video>
+                    <!-- Resume download button -->
+                    <div class="resume-button">
+                        <a href="images/HemmannResume.pdf">Download my Resume</a>
+                    </div>
+                </div>
+                <div class="career-overview-content">
+                    <h1>Career Overview</h1>
+                    <p>I began my career at Miller's Professional Imaging in Columbia, Missouri as a seasonal production team member in August 2011, working in the Print Finishing Department. If I'm being honest, I initially took the job primarily because it offered health insurance, and I was about to lose coverage under my parents' plan after turning 26. What began as a practical decision, however, turned into a long-term career with opportunities for growth and advancement.</p>
+                    <p>After nearly four years with the company, I received my first promotion to Finish Department Lead in July 2015. Serving as a department lead opened my eyes to what it means to manage and lead a team while also giving me my first experience managing product inventory. In February 2020, I was promoted to Warehouse Manager, a role that significantly expanded my responsibilities from managing inventory for a single department to overseeing product inventory across the company. Two years later, in February 2022, I was promoted to my current role as Purchasing Manager.</p>
+                </div>
+                <div class="career-overview-list-container">
+                    <div class="career-overview-list">
+                        <h2>Positions I have held in the past</h2>
+                        <ul>
+                            <li>Finish Department Team Member</li>
+                            <li>Finish Department Team Lead</li>
+                            <li>Warehouse Manager</li>
+                            <li>Purchasing Manager</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="career-overview-list">
-                <h2>Positions I have held in the past</h2>
-                <ul>
-                    <li>Finish Department Team Member</li>
-                    <li>Finish Department Team Lead</li>
-                    <li>Warehouse Manager</li>
-                    <li>Purchasing Manager</li>
-                </ul>
-            </div>
-        </div>
+        </main>
         <!-- Page footer -->
         <footer class="footer">
-            <p class="footer-email"><img src="images/icons8-email-50.png" width="20" height="20" title="Icon from icons8.com"> ashgx6@mail.missouri.edu</p>
-            <p class="footer-phone"><img src="images/icons8-phone-50.png" width="20" height="20" title="Icon from icons8.com"> (573) 123-4567</p>
-            <p class="footer-date">Date: 9/17/2026</p>
+            <div class="footer-email"><img src="images/icons8-email-50.png" width="20" height="20" title="Icon from icons8.com">ashgx6@mail.missouri.edu</div>
+            <div class="footer-phone"><img src="images/icons8-phone-50.png" width="20" height="20" title="Icon from icons8.com">(573) 123-4567</div>
+            <div class="footer-date">Date: 11/5/2026</div>
         </footer>
     </body>
 </html>
