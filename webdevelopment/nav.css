@@ -28,7 +28,8 @@
     transition: background-color 0.3s ease-in;
     transition: border-bottom-color 0.3s ease-in;
 }
-.nav-list li a:hover {
+.nav-list li a:hover,
+.mobile-nav-list li a:hover {
     background-color: #E9EEF4;
     border-bottom-color: #1F3B5B;
 }
@@ -78,7 +79,7 @@
 }
 .mobile-nav-list li a {
     display: block;
-    padding: 2rem 3rem;
+    padding: 3rem 4rem;
 }
 /* Checkbox is hidden */
 #mobile-menu-toggle {
@@ -95,6 +96,6 @@
     input[id="mobile-menu-toggle"]:checked ~ .mobile-nav-list {
             display: flex;
             flex-direction: column;
-            padding: 1.2rem 2.4rem;
+            /* padding: 1.2rem 2.4rem; */
         }
 }
