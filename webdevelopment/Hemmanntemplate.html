@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <!--
-    Name:
-    Date:
-    Course:
-    Description:
+    Name: Adam Hemmann
+    Date: 11/12/2026
+    Course: ISLT 4355
+    Description: Boilerplate template
     -->
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
+        <title>Template</title>
         <!-- Link to external CSS files -->
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="nav.css">
@@ -25,6 +25,23 @@
             <!-- Top navigation bar -->     
             <nav class="nav-bar">
                 <div class="nav-logo"><img src="images/logoTransparent.png" alt="Logo" width="90" height="90"></div>
+
+                <!-- Hamburger/Mobile-only navigation -->
+                <input type="checkbox" id="mobile-menu-toggle">
+                <label for="mobile-menu-toggle" class="hamburger">☰</label>
+                    
+                    <!-- Mobile-only navigation menu -->
+                    <!-- Will only display on viewport <= 768px -->
+                    <ul class="mobile-nav-list">
+                        <li class="nav-link"><a href="index.html">Home</a></li>
+                        <li class="nav-link"><a href="about.html">About</a></li>
+                        <li class="nav-link"><a href="#career">Career</a></li>
+                        <li class="nav-link"><a href="reflection.html">Reflection</a></li>
+                        <li class="nav-link"><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                <!-- Desktop-only navigation menu -->
+                <!-- Will only display on viewport >768px -->
                 <ul class="nav-list">
                     <li class="nav-link"><a href="index.html">Home</a></li>
                     <li class="nav-link"><a href="about.html">About</a></li>
@@ -42,11 +59,11 @@
         </header>
         <!-- Main page content will go here -->
         <h1>Hello, world!</h1>
-        <!-- Page footer -->
+       <!-- Page footer -->
         <footer class="footer">
-            <p class="footer-email"><img src="images/icons8-email-50.png" width="20" height="20" title="Icon from icons8.com"> ashgx6@mail.missouri.edu</p>
-            <p class="footer-phone"><img src="images/icons8-phone-50.png" width="20" height="20" title="Icon from icons8.com"> (573) 123-4567</p>
-            <p class="footer-date">Date: 9/17/2026</p>
+            <div class="footer-email"><img src="images/icons8-email-50.png" width="20" height="20" title="Icon from icons8.com">ashgx6@mail.missouri.edu</div>
+            <div class="footer-phone"><img src="images/icons8-phone-50.png" width="20" height="20" title="Icon from icons8.com">(573) 123-4567</div>
+            <div class="footer-date">Date: 11/5/2026</div>
         </footer>
     </body>
 </html>

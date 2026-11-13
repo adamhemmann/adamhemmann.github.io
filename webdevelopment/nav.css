@@ -2,6 +2,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    background-color: #FFFFFF;
 }
 .nav-list {
     display: flex;
@@ -10,10 +12,11 @@
 }
 .nav-list li a {
     display: block;
-    padding: 36px 20px;
+    padding: 3.6rem 2rem;
 }
 .nav-list,
-.nav-dropdown {
+.nav-dropdown,
+.mobile-nav-list {
     list-style: none;
 }
 .nav-link a {
@@ -53,4 +56,45 @@
 }
 .nav-dropdown li a:hover {
     background-color: #E9EEF4;
+}
+.hamburger {
+    display: none;
+    font-size: x-large;
+    color: #1F3B5B;
+}
+
+/* Mobile nav menu */
+.mobile-nav-list {
+    /*Mabile nav is hidden until the hamburger is tapped */
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 6rem;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+.mobile-nav-list li a {
+    display: block;
+    padding: 2rem 3rem;
+}
+/* Checkbox is hidden */
+#mobile-menu-toggle {
+    display: none;
+}
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-list {
+        display: none;
+    }
+    input[id="mobile-menu-toggle"]:checked ~ .mobile-nav-list {
+            display: flex;
+            flex-direction: column;
+            padding: 1.2rem 2.4rem;
+        }
 }
