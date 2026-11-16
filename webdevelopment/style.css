@@ -95,9 +95,10 @@ p {
     align-items: center;
     text-align: center;
 }
-.fav-quote-container blockquote p {
+.fav-quote-container blockquote h1 {
     font-family: Open Sans;
     font-size: x-large;
+    font-weight: 400;
     font-style: italic;
     color: #1F3B5B;
 }
