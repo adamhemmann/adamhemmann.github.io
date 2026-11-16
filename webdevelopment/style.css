@@ -17,11 +17,11 @@ main {
 }
 h1 {
     color: #1F3B5B;
-    font-size: 40px;
+    font-size: 4rem;
 }
 p {
     color: #4B688A;
-    font-size: 13px;
+    font-size: 1.3rem;
 }
 
 /* Begin index.html styles */
@@ -112,8 +112,10 @@ p {
     padding: 3rem 3rem;
     font-family: Open Sans, sans-serif;
 }
-.goals-container p {
+.goals-container h2 {
     font-size: 1.6rem;
+    color: #4B688A;
+    font-weight: 400;
 }
 
 /* Begin reflection.html styles */
