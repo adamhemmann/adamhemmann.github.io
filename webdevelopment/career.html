@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+    Name: Adam Hemmann
+    Date: 11/15/2026
+    Course: ISLT 4355
+    Description: Resume website Career Overview page
+    -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Career</title>
+        <!-- Link to external CSS files -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="nav.css">
+        <!-- Links to fonts Montserrat and Open Sans from Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    </head>
+    <body>
+        <header>
+            <!-- Top navigation bar -->     
+            <nav class="nav-bar">
+                <div class="nav-logo"><img src="images/logoTransparent.png" alt="Logo" width="90" height="90"></div>
+
+                <!-- Hamburger/Mobile-only navigation -->
+                <input type="checkbox" id="mobile-menu-toggle">
+                <label for="mobile-menu-toggle" class="hamburger">☰</label>
+                    
+                    <!-- Mobile-only navigation menu -->
+                    <!-- Will only display on viewport <= 768px -->
+                    <ul class="mobile-nav-list">
+                        <li class="nav-link"><a href="index.html">Home</a></li>
+                        <li class="nav-link"><a href="about.html">About</a></li>
+                        <li class="nav-link"><a href="career.html">Career</a></li>
+                        <li class="nav-link"><a href="reflection.html">Reflection</a></li>
+                        <li class="nav-link"><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                <!-- Desktop-only navigation menu -->
+                <!-- Will only display on viewport >768px -->
+                <ul class="nav-list">
+                    <li class="nav-link"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="about.html">About</a></li>
+                    <li class="nav-link"><a href="career.html">Career ▽</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="career.html#career-detail1">Item 1</a></li>
+                            <li><a href="career.html#career-detail2">Item 2</a></li>
+                            <li><a href="career.html#career-detail3">Item 3</a></li>
+                            <li><a href="career.html#career-detail4">Item 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-link"><a href="reflection.html">Reflection</a></li>
+                    <li class="nav-link"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Main page content will go here -->
+        <main class="">
+             <!-- Hero section -->
+            <section class="career-hero">
+                <div class="hero-text">
+                    <h2>My Career Journey</h2>
+                    <p>Each role has helped me build the skills and experience that shape who I am today.</p>
+                </div>
+                <div class="image-credit">
+                    Photo by <a href="https://unsplash.com/@v2osk">v2osk</a> at <a href="https://unsplash.com/photos/foggy-mountain-summit-1Z2niiBPg5A">Unsplash</a>
+                </div>
+            </section>
+                <section class="career-journey">
+                <div class="career-detail" id="career-detail1">
+                    <input type="checkbox" id="career-detail-toggle1" hidden>
+                    <div class="career-logo-container">
+                        <img src="images/MS365Logo.png" class="career-icon1" alt="Microsoft Dynamics 365 logo">
+                    </div>
+                    <div class="career-list-container">
+                        <h1>February 2022 - Present</h1>
+                        <h2>Miller's Professional Imaging/Mpix, Purchasing Manager</h2>
+                        <ul class="career-journey-list">
+                            <li>Manage purchasing, inventory, and vendor relationships</li>
+                            <li>Ensure product availability and cost-efficiency</li>
+                            <li>Support company goals through strategic planning and process improvement</li>
+                        </ul>
+                    </div>
+                    <div class="detail-toggle-container">
+                        <label for="career-detail-toggle1" class="career-detail-button">Learn More ▽</label>
+                    </div>
+                    <div class="hidden-item-container">
+                        <p>
+                            After nearly two years in the Warehouse Manager role, our Columbia
+                            production facility finally reached a size that required its own dedicated
+                            purchasing manager. Previously, there had been only one purchasing
+                            manager at our Pittsburg, KS location who was responsible for both the
+                            Columbia and Pittsburg inventories. In this role, I have helped facilitate
+                            the transition from an old and outdated accounting and inventory software
+                            to the much more modern Microsoft Dynamics 365 Business Central. This
+                            transition required numerous positions and departments working in
+                            concert to ensure that everything went smoothly.
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="career-detail" id="career-detail2">
+                    <input type="checkbox" id="career-detail-toggle2" hidden>
+                    <div class="career-logo-container">
+                        <img src="images/mpixLogo.png" class="career-icon2" alt="Mpix logo">
+                    </div>
+                    <div class="career-list-container">
+                        <h1>February 2020 - February 2022</h1>
+                        <h2>Miller's Professional Imaging/Mpix, Warehouse Manager</h2>
+                        <ul class="career-journey-list">
+                            <li>Managed product inventory across all areas of production</li>
+                            <li>Coordinated with production and shipping teams</li>
+                            <li>Led reorganization and relocation initiative during the COVID-19 pandemic</li>
+                        </ul>
+                    </div>
+                    <div class="detail-toggle-container">
+                        <label for="career-detail-toggle2" class="career-detail-button">Learn More ▽</label>
+                    </div>
+                    <div class="hidden-item-container">
+                        <p>
+                            My second promotion was to the position of Warehouse Manager. In
+                            response to challenges presented by the COVID-19 pandemic, the
+                            company decided to reorganize which products were to be produced in
+                            Columbia and which were to be produced at our sister-site in Pittsburg,
+                            Kansas. One of my biggest achievements occurred during this time when
+                            I was required to assist in the move of over 300 pallets out of our
+                            warehouse in Columbia to the company’s other production facility in 
+                            Pittsburg, Kansas.
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="career-detail" id="career-detail3">
+                    <input type="checkbox" id="career-detail-toggle3" hidden>
+                    <div class="career-logo-container">
+                        <img src="images/millersLogo.png" class="career-icon3" alt="Miller's Professional Imaging logo">
+                    </div>
+                    <div class="career-list-container">
+                        <h1>July 2015 - February 2020</h1>
+                        <h2>Miller's Professional Imaging, Finish Department Team Lead</h2>
+                        <ul class="career-journey-list">
+                            <li>Led a team and established best practices</li>
+                            <li>Trained new and seasonal team members</li>
+                            <li>Gained first-hand experience managing product inventory</li>
+                        </ul>
+                    </div>
+                    <div class="detail-toggle-container">
+                        <label for="career-detail-toggle3" class="career-detail-button">Learn More ▽</label>
+                    </div>
+                    <div class="hidden-item-container">
+                        <p>
+                            This was my first promotion within the company, as well as my first job
+                            ever in which I was leading a team of people. I was responsible for
+                            establishing best practices across various areas of production. It was also
+                            my responsibility to train other new, seasonal team members during our
+                            seasonal hiring time each fall.
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="career-detail" id="career-detail4">
+                    <input type="checkbox" id="career-detail-toggle4" hidden>
+                    <div class="career-logo-container">
+                        <img src="images/millersLogo.png" class="career-icon4" alt="Miller's Professional Imaging logo">
+                    </div>
+                    <div class="career-list-container">
+                        <h1>August 2011 - July 2015</h1>
+                        <h2>Miller's Professional Imaging, Finish Department Team Member</h2>
+                        <ul class="career-journey-list">
+                            <li>Worked in the Print Finishing Department</li>
+                            <li>Cross-trained in other areas of production</li>
+                            <li>Focused on teamwork and producing a high-quality end product</li>
+                        </ul>
+                    </div>
+                    <div class="detail-toggle-container">
+                        <label for="career-detail-toggle4" class="career-detail-button">Learn More ▽</label>
+                    </div>
+                    <div class="hidden-item-container">
+                        <p>
+                            My first role with the company began with me taking a seasonal position.
+                            Teamwork, communication, and producing high-quality work were
+                            emphasized. I was familiarized with various production processes of our
+                            department, as well as cross-trained in other departments elsewhere in
+                            production.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+       <!-- Page footer -->
+        <footer class="footer">
+            <div class="footer-email"><img src="images/icons8-email-50.png" width="20" height="20" title="Icon from icons8.com">ashgx6@mail.missouri.edu</div>
+            <div class="footer-phone"><img src="images/icons8-phone-50.png" width="20" height="20" title="Icon from icons8.com">(573) 123-4567</div>
+            <div class="footer-date">Date: 11/12/2026</div>
+        </footer>
+    </body>
+</html>

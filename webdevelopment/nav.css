@@ -77,11 +77,7 @@
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15);
     z-index: 1000;
 }
-.mobile-nav-list li a {
-    display: block;
-    padding: 3rem 4rem;
-}
-/* Checkbox is hidden */
+    /* Checkbox is hidden */
 #mobile-menu-toggle {
     display: none;
 }
@@ -96,6 +92,9 @@
     input[id="mobile-menu-toggle"]:checked ~ .mobile-nav-list {
             display: flex;
             flex-direction: column;
-            /* padding: 1.2rem 2.4rem; */
-        }
+    }
+    .mobile-nav-list li a {
+        display: block;
+        padding: 1rem 2.5rem;
+    }
 }
