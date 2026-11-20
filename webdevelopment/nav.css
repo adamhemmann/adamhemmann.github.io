@@ -25,16 +25,13 @@
     color: #4B688A;
     text-decoration: none;
     border-bottom: 3px solid transparent;
-    transition: background-color 0.3s ease-in;
-    transition: border-bottom-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in,
+                border-bottom-color 0.3s ease-in;
 }
 .nav-list li a:hover,
 .mobile-nav-list li a:hover {
     background-color: #E9EEF4;
     border-bottom-color: #1F3B5B;
-}
-.nav-dropdown {
-    background-color: #FFFFFF;
 }
 .nav-dropdown li {
     font-family: Open Sans;
@@ -46,6 +43,7 @@
     position: relative;
 }
 .nav-dropdown {
+    background-color: #FFFFFF;
     width: 100%;
     position: absolute;
     text-align: center;
@@ -55,9 +53,6 @@
 .nav-list li:hover .nav-dropdown {
     display: block;
 }
-.nav-dropdown li a:hover {
-    background-color: #E9EEF4;
-}
 .hamburger {
     display: none;
     font-size: x-large;
@@ -66,7 +61,7 @@
 
 /* Mobile nav menu */
 .mobile-nav-list {
-    /*Mabile nav is hidden until the hamburger is tapped */
+    /* Mabile nav is hidden until the hamburger is tapped */
     display: none;
     position: absolute;
     top: 100%;

@@ -1,4 +1,17 @@
-/* Begin global styles */
+/* 
+Begin global styles
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+    /* 
+    Shrink default font size to 10 px
+    (16px * 62.5% = 10px)
+    Makes rem measurements more intuitive down below:
+    1rem = 10px, 1.6rem = 16px, etc.
+    */
 html {
     font-size: 62.5%;
 }
@@ -6,8 +19,6 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-}
-body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -21,20 +32,25 @@ h1 {
 }
 p {
     color: #4B688A;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 }
 
-/* Begin index.html styles */
-.index-hero {
+/*
+Begin styles for page hero sections
+*/
+.index-hero,
+.reflect-hero,
+.contact-page-hero,
+.career-hero {
     display: flex;
-    background-image: 
-        linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(31, 59, 91, 0.9) 100%),
-        url("images/abouthero.png");
     background-size: cover;
     background-position: center;
     min-height: 25rem;
     padding-top: 10rem;
     padding-left: 5rem;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 2rem 1rem;
 }
 .hero-text h1,
 .hero-text h2,
@@ -53,6 +69,46 @@ p {
 .hero-text p {
     font-family: Open Sans;
 }
+.career-hero .hero-text,
+.contact-page-hero .hero-text,
+.reflect-hero .hero-text {
+    align-self: stretch;
+    margin-top: 0;
+}
+.career-hero .hero-text h2,
+.reflect-hero .hero-text h2 {
+    font-size: xx-large;
+}
+.contact-page-hero .hero-text h2 {
+    font-size: large;
+}
+.career-hero .hero-text p,
+.contact-page-hero .hero-text p,
+.reflect-hero .hero-text p {
+    font-size: large;
+}
+.image-credit {
+    font-family: Open Sans;
+    color: #4B688A;
+    font-size: xx-small;
+    text-align: right;
+    margin-top: auto;
+    margin-left: 0;
+    padding-right: 1rem;
+    padding-bottom: .5rem;
+}
+.image-credit a {
+    color: #4B688A;
+}
+
+/*
+Begin index.html styles 
+*/
+.index-hero {
+    background-image: 
+        linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(31, 59, 91, 0.9) 100%),
+        url("images/abouthero.png");
+}
 .hero-button {
     margin-top: 4rem;
     margin-bottom: 2rem;
@@ -60,7 +116,7 @@ p {
     justify-content: center;
     align-items: center;
     padding: 1.2rem 2.4rem;
-    width: 10rem;
+    width: 15rem;
     background-color: #FFFFFF;
     font-family: Montserrat, sans-serif;
     font-weight: bold;
@@ -75,21 +131,10 @@ p {
 .hero-button:hover {
     transform: scale(1.1);
 }
-.image-credit {
-    font-family: Open Sans;
-    color: #4B688A;
-    font-size: xx-small;
-    align-self: flex-end;
-    margin-left: auto;
-    padding-right: 1rem;
-    padding-bottom: .5rem;
-}
-.image-credit a {
-    color: #4B688A;
-}
 .fav-quote-container {
     display: flex;
-    height: 20rem;
+    min-height: 20rem;
+    height: auto;
     background-color: #E9EEF4;
     justify-content: center;
     align-items: center;
@@ -109,7 +154,7 @@ p {
     max-width: 100rem;
     margin-left: auto;
     margin-right: auto;
-    padding: 3rem 3rem;
+    padding: 3rem;
     font-family: Open Sans, sans-serif;
 }
 .goals-container h2 {
@@ -118,25 +163,18 @@ p {
     font-weight: 400;
 }
 
-/* Begin reflection.html styles */
+/*
+Begin reflection.html styles 
+*/
 .reflect-hero {
-    display: flex;
     background-image: 
         linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(31, 59, 91, 0.9) 100%),
         url("images/reflectionhero.png");
-    background-size: cover;
-    background-position: center;
-    min-height: 25rem;
-    padding-top: 10rem;
-    padding-left: 5rem;
-}
-    /*Slightly edit the alignment of only the hero text on my Reflection page*/
-.reflect-hero .hero-text {
-    align-self: center;
-    margin-top: -5rem;
 }
 .personal-reflection-container {
-    margin: 3rem 15rem;
+    max-width: 90rem;
+    margin: 3rem auto;
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
 }
@@ -152,10 +190,7 @@ p {
     font-family: Open Sans;
     margin-top: 1rem;
 }
-    /*pseudo-classes/elements*/
-.personal-reflection-container p:first-of-type {
-    margin-top: -10px;
-}
+    /* pseudo-classes/elements */
 .personal-reflection-container p:first-of-type::first-letter {
     font-size: 250%;
     font-family: Montserrat;
@@ -167,7 +202,9 @@ p {
     text-indent: 2em;
 }
 
-/* Begin about.html styles */
+/* 
+Begin about.html styles 
+*/
 .about-page-grid {
     display: grid;
     width: 100%;
@@ -180,17 +217,18 @@ p {
     width: 100%;
     display: grid;
     gap: 3rem 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 600px));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 40rem), 60rem));
     justify-content: center;
     background-color: #E9EEF4;
-    padding: 3rem 0;
+    padding: 3rem 2rem;
 }
-.bio-content {
-    /* padding: 2rem; */
-    margin: auto auto;
-}
+.bio-content,
 .career-overview-content {
-    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: auto;
+    line-height: 1.6;
 }
 .bio-content h1,
 .career-overview-content h1 {
@@ -205,58 +243,59 @@ p {
     text-indent: 2em;
 }
 .about-headshot-container {
-    margin: auto auto;
+    margin: auto;
 }
 .about-headshot {
-    margin: auto auto;
+    margin: auto;
     border-radius: .8rem;
     border: 3px solid #1F3B5B;
     box-shadow: .5rem .5rem 1.5rem 0 rgba(0, 0, 0, 0.3);
-    width: 150px;
-    height: 150px;
+    max-width: 100%;
+    object-fit: cover;
 }
     /* Media queries to change image size based on screen size */
 @media screen and (min-width: 600px) {
     .about-headshot {
         width: 250px;
-        height: 250px;
+        height: auto;
     }
 }
 @media screen and (min-width: 1235px) {
     .about-headshot {
         width: 400px;
-        height: 400px;
+        height: auto;
     }
 }
 .career-overview-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 500px));
-    justify-content: center;
-    gap: 2rem;
-    padding: 3rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+    max-width: 110rem;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+.career-overview-container > * {
+    min-width: 0;
+}
+@media screen and (min-width: 900px) {
+    .career-overview-container {
+        grid-template-columns:
+            minmax(0, 1fr) minmax(0, 1fr);
+        align-items: start;
+    }
 }
 .about-media-container {
     display: grid;
     min-height: 30rem;
     gap: 2rem;
     place-items: center;
+    margin: auto;
 }
 .about-video {
     width: 100%;
 }
-@media screen and (min-width: 600px) {
-    .about-video {
-        width: 75%;
-    }
-}
-@media screen and (min-width: 1235px) {
-    .about-video {
-        width: 75%;
-    }
-}
 .resume-button {
     width: 19rem;
-    height: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -269,7 +308,7 @@ p {
     cursor: pointer;
     border: 3px solid #1F3B5B;
     align-self: center;
-    margin: auto auto;
+    margin: auto;
 }
 .resume-button:hover {
     transform: scale(1.1);
@@ -278,37 +317,62 @@ p {
     text-decoration: none;
     color:#4B688A;
 }
-.career-overview-list-container {
-    margin: auto auto;
+.career-overview-table-container {
+    grid-column: 1 / -1;
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.career-overview-list h2 {
-    font-family: Montserrat;
+.career-overview-table-container caption {
+    font-size: x-large;
+    font-family: Open Sans, sans-serif;
+    color: #1F3B5B;
+    text-align: center;
+}
+.career-overview-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Open Sans, sans-serif;
+    color: #1F3B5B;
+    border: 1px solid #1F3B5B;
+}
+.career-overview-table th,
+.career-overview-table td {
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: left;
+    vertical-align: top;
+}
+.career-overview-table tr {
+    font-family: Open Sans, sans-serif;
     color: #1F3B5B;
 }
-.career-overview-list ul {
-    margin-top: 2rem;
-    list-style-type: square;
+.career-overview-table thead th {
+    background-color: #1F3B5B;
+    color: #FFFFFF;
 }
-.career-overview-list li {
-    font-family: Open Sans;
-    color:#4B688A;
-    padding: 20px 0;
+.career-overview-table tbody tr:nth-child(odd) {
+    background-color: #E9EEF4;
+}
+@media screen and (max-width: 900px) {
+    .career-overview-table th,
+    .career-overview-table td {
+        font-size: small;        
+    }
 }
 
-/* Begin contact.html styles */
+/* 
+Begin contact.html styles 
+*/
 .contact-page-hero {
-    display: flex;
     background-image: 
         linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(31, 59, 91, 0.9) 100%),
         url("images/contacthero.png");
-    background-size: cover;
-    background-position: center;
-    min-height: 25rem;
-    padding-top: 10rem;
-    padding-left: 5rem;
 }
 .contact-page-content {
-    /* flex: 1; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -319,7 +383,7 @@ p {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   padding: 2rem 2rem;
+   padding: 2rem;
 }
 .quick-contact-info-container p {
     color: #1F3B5B;
@@ -333,7 +397,7 @@ p {
 .contact-form-container {
     min-height: 500px;
     background-color: #E9EEF4;
-    padding: 2rem 2rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -346,17 +410,16 @@ p {
     font-family: Open Sans,sans-serif;
 }
 .contact-form {
-    min-height: 650px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 1.5rem;
     align-items: center;
 }
 .form-radio-label {
     text-align: center;
     color: #ff4d4d;
 }
-/* All required form fields will have a red border */
+    /* All required form fields will have a red border */
 input:required,
 textarea:required,
 select:required {
@@ -366,27 +429,13 @@ select:required {
     color: #ff4d4d;
 }
 
-/*Begin career.html styles */
+/*
+Begin career.html styles 
+*/
 .career-hero {
-    display: flex;
     background-image: 
         linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(31, 59, 91, 0.9) 100%),
         url("images/careerhero.png");
-    background-size: cover;
-    background-position: center;
-    min-height: 25rem;
-    padding-top: 10rem;
-    padding-left: 5rem;
-}
-.career-hero .hero-text {
-    align-self: center;
-    margin-top: -5rem;
-}
-.career-hero .hero-text h2 {
-    font-size: xx-large;
-}
-.career-hero .hero-text p {
-    font-size: large;
 }
 .career-journey {
     font-family: Open Sans, sans-serif;
@@ -402,7 +451,7 @@ select:required {
     color: #4B688A;
 }
 .career-journey-list li {
-    font-size: small;
+    font-size: 1.6rem;
     color: #1F3B5B;
 }
 .career-detail {
@@ -417,19 +466,19 @@ select:required {
 }
     /* Career icon sizing via CSS for easy resizing with media queries */
 .career-icon1 {
-    width: 285px;
-    height: 48px;
+    width: 100%;
+    height: auto;
 }
 .career-icon2 {
-    width: 98px;
-    height: 47px;
+    width: 60%;
+    height: auto;
 }
 .career-icon3,
 .career-icon4 {
-    width: 242px;
-    height: 67px;
+    width: 100%;
+    height: auto;
 }
-.career-list-container {
+.career-detail-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -450,6 +499,8 @@ select:required {
     display: none;
     /* Content will span full width of .career-detail when shown */
     grid-column: 1/-1;
+    max-width: 900px;
+    margin: auto;
 }
 .hidden-item-container p {
     text-indent: 2em;
@@ -459,10 +510,10 @@ select:required {
     padding: 2rem 4rem;
     margin: 2rem 0 0;
 }
-#career-detail-toggle1:checked ~ .hidden-item-container,
-#career-detail-toggle2:checked ~ .hidden-item-container,
-#career-detail-toggle3:checked ~ .hidden-item-container,
-#career-detail-toggle4:checked ~ .hidden-item-container {
+#career-hidden-detail-toggle1:checked ~ .hidden-item-container,
+#career-hidden-detail-toggle2:checked ~ .hidden-item-container,
+#career-hidden-detail-toggle3:checked ~ .hidden-item-container,
+#career-hidden-detail-toggle4:checked ~ .hidden-item-container {
     display: block;
 }
 @media (max-width: 1000px) {
@@ -474,6 +525,19 @@ select:required {
         justify-content: center;
         padding: 2rem 0;
     }
+    .career-icon1 {
+    width: 70%;
+    height: auto;
+    }
+    .career-icon2 {
+        width: 35%;
+        height: auto;
+    }
+    .career-icon3,
+    .career-icon4 {
+        width: 70%;
+        height: auto;
+    }
 }
 @media (max-width: 768px) {
     .career-journey {
@@ -484,12 +548,13 @@ select:required {
     }
     .career-journey h2 {
         font-size: small;
+        font-weight: 600;
+    }
+    .career-journey-list li {
+        font-size: small;
     }
     .career-detail {
         grid-template-columns: 1fr;
-    }
-    .career-journey-list li {
-        font-size: x-small;
     }
     .detail-toggle-container label {
         font-size: medium;
@@ -498,24 +563,26 @@ select:required {
         padding: 2rem 0;
     }
     .career-icon1 {
-        width: 119px;
-        height: 20px;
+        width: 50%;
+        height: auto;
     }
     .career-icon2 {
-        width: 31px;
-        height: 15px;
+        width: 20%;
+        height: auto;
     }
     .career-icon3,
     .career-icon4 {
-        width: 108px;
-        height: 30px;
+        width: 40%;
+        height: auto;
     }
     .hidden-item-container p {
-    font-size: 1rem;
+    font-size: small;
     }
 }
 
-/* Begin footer styles */
+/*
+Begin footer styles 
+*/
 .footer {
     display: flex;
     justify-content: space-around;
@@ -534,7 +601,9 @@ select:required {
     padding-right: 1rem;
 }
 
-/* Print queries */
+/* 
+Print queries 
+*/
 @media print {
     /* Ensure all pages will print with 1in margins */
     @page {
@@ -544,16 +613,17 @@ select:required {
     header,
     .image-credit,
     .about-headshot,
-    .vertical-container,
+    .about-media-container,
     .footer-date,
     .footer img {
         display: none;
     }
     /* Begin print query styles for footer */
-    .footer p {
+    .footer div {
         color: black;
         font-family: serif;
     }
+
     /* Begin print query styles for about.html */
     .about-page {
         /* Remove screen-specific layout */
