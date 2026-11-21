@@ -411,9 +411,31 @@ Begin contact.html styles
 }
 .contact-form {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
     gap: 1.5rem;
     align-items: center;
+}
+.contact-form .form-row-names,
+.contact-form .form-row-email,
+.contact-form .form-row-message {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+}
+.form-row-message > div {
+    width: 100%;
+}
+.form-row-howfind > div {
+    display: flex;
+    align-items: center;
+}
+.contact-form #form-message {
+    display: block;
+    width: 100%;
+    min-height: 15rem;
+    resize: vertical;
 }
 .form-radio-label {
     text-align: center;
@@ -583,6 +605,9 @@ Begin career.html styles
 /*
 Begin footer styles 
 */
+.footer * {
+    box-sizing: content-box;
+}
 .footer {
     display: flex;
     justify-content: space-around;

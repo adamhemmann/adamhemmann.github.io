@@ -9,10 +9,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact</title>
+        <title>Home</title>
         <!-- Link to external CSS files -->
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="nav.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="nav.css">
         <!-- Links to fonts Montserrat and Open Sans from Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,11 @@
         <header>
             <!-- Top navigation bar -->     
             <nav class="nav-bar">
-                <div class="nav-logo"><img src="images/logoTransparent.png" alt="Logo" width="90" height="90"></div>
+                <div class="nav-logo"><img src="images/logoTransparent.png" 
+                                           alt="Logo"
+                                           width="90"
+                                           height="90">
+                </div>
 
                 <!-- Hamburger/Mobile-only navigation -->
                 <input type="checkbox" id="mobile-menu-toggle">
@@ -66,8 +70,8 @@
                     <h2>I'd love to connect!</h2>
                 </div>
                 <div class="image-credit">
-                Photo by <a href="https://unsplash.com/@dkoi">D koi</a> at <a href="https://unsplash.com/photos/3d-wireframe-polyhedron-with-metallic-spheres-COFXWa6LJdw">Unsplash</a>
-            </div>
+                    Photo by <a href="https://unsplash.com/@dkoi">D koi</a> at <a href="https://unsplash.com/photos/3d-wireframe-polyhedron-with-metallic-spheres-COFXWa6LJdw">Unsplash</a>
+                </div>
             </section>
             <section class="contact-page-content">
                 <div class="quick-contact-info-container">
@@ -79,50 +83,88 @@
                     <p>Columbia, MO</p>
                 </div>
                 <div class="contact-form-container">
-                    <form action="mailto:adam.hemmann@gmail.com?Subject=Contact%20Form" method="post" enctype="text/plain" class="contact-form">
+                    <form action="mailto:adam.hemmann@gmail.com?Subject=Contact%20Form" 
+                          method="post"
+                          enctype="text/plain"
+                          class="contact-form">
                         <h1 class="contact-form-title">Send me a message!</h1>
                         <p class="form-required-label">*All fields are required</p>
                         <div class="form-row-names">
-                        <label for="form-name-prefix">Prefix: </label>
-                        <select name="form-name-prefix" id="form-name-prefix" required>
-                            <option value="" disabled selected>Select a prefix</option>
-                            <option value="Mr">Mr.</option>
-                            <option value="Ms">Ms.</option>
-                            <option value="Mrs">Mrs.</option>
-                            <option value="Dr">Dr.</option>
-                            <option value="Prof">Prof.</option>
-                            <option value="Rev">Rev.</option>
-                            <option value="Fr">Fr.</option>
-                            <option value="Hon">Hon.</option>
-                            <option value="Atty">Atty.</option>
-                        </select>
-                        
-                        <label for="form-firstname">First name: </label>
-                        <input type="text" id="form-firstname" name="form-firstname" placeholder="First name" required>
-
-                        <label for="form-lastname">Last name: </label>
-                        <input type="text" id="form-lastname" name="form-lastname" placeholder="Last name" required>
+                            <div>
+                                <label for="form-name-prefix">Prefix: </label>
+                                <select name="form-name-prefix" id="form-name-prefix" required>
+                                    <option value="" disabled selected>Select a prefix</option>
+                                    <option value="Mr">Mr.</option>
+                                    <option value="Ms">Ms.</option>
+                                    <option value="Mrs">Mrs.</option>
+                                    <option value="Dr">Dr.</option>
+                                    <option value="Prof">Prof.</option>
+                                    <option value="Rev">Rev.</option>
+                                    <option value="Fr">Fr.</option>
+                                    <option value="Hon">Hon.</option>
+                                    <option value="Atty">Atty.</option>
+                                </select>
+                            </div>
+                            <div>                    
+                                <label for="form-firstname">First name: </label>
+                                <input type="text" 
+                                       id="form-firstname"
+                                       name="form-firstname"
+                                       placeholder="First name"
+                                       required>
+                            </div>
+                            <div>
+                                <label for="form-lastname">Last name: </label>
+                                <input type="text" 
+                                       id="form-lastname"
+                                       name="form-lastname"
+                                       placeholder="Last name"
+                                       required>
+                            </div>
                         </div>
 
                         <div class="form-row-email">
-                        <label for="form-email">Email address: </label>
-                        <input type="email" id="form-email" name="form-email" 
-                        placeholder="Email address" required>
+                            <div>
+                                <label for="form-email">Email address: </label>
+                                <input type="email" 
+                                       id="form-email"
+                                       name="form-email" 
+                                       placeholder="Email address" 
+                                       required>
+                            </div>
                         </div>
 
                         <div class="form-row-message">
-                        <label for="form-message">Message: </label>
-                        <textarea id="form-message" name="form-message" placeholder="Placeholder" rows="15" cols="50" required></textarea>
+                            <div>
+                                <label for="form-message">Message: </label>
+                                <textarea id="form-message" 
+                                          name="form-message" 
+                                          placeholder="Type your message here" 
+                                          required></textarea>
+                            </div>
                         </div>
-
                         <div class="form-row-howfind">
-                        <p class="form-radio-label">How did you find me?</p>
-                            <input type="radio" id="facebook" name="how-find-question" value="Facebook" required>
-                            <label for="facebook">Facebook</label>
-                            <input type="radio" id="linkedin" name="how-find-question" value="LinkedIn" required>
-                            <label for="linkedin">LinkedIn</label>
-                            <input type="radio" id="other" name="how-find-question" value="Other" required>
-                            <label for="other">Other</label>
+                            <p class="form-radio-label">How did you find me?</p>
+                            <div>
+                                <input type="radio" 
+                                    id="facebook"
+                                    name="how-find-question"
+                                    value="Facebook"
+                                    required>
+                                <label for="facebook">Facebook</label>
+                                <input type="radio"
+                                    id="linkedin"
+                                    name="how-find-question"
+                                    value="LinkedIn"
+                                    required>
+                                <label for="linkedin">LinkedIn</label>
+                                <input type="radio"
+                                    id="other"
+                                    name="how-find-question"
+                                    value="Other"
+                                    required>
+                                <label for="other">Other</label>
+                            </div>
                         </div>
 
                         <div class="form-row-submit">
@@ -133,11 +175,20 @@
                 </div>
             </section>
         </main>
+        
         <!-- Page footer -->
         <footer class="footer">
-            <div class="footer-email"><img src="images/icons8-email-50.png" width="20" height="20" title="Icon from icons8.com">ashgx6@mail.missouri.edu</div>
-            <div class="footer-phone"><img src="images/icons8-phone-50.png" width="20" height="20" title="Icon from icons8.com">(573) 123-4567</div>
-            <div class="footer-date">Date: 11/5/2026</div>
+            <div class="footer-email"><img src="images/icons8-email-50.png" 
+                                           width="20"
+                                           height="20"
+                                           title="Icon from icons8.com">ashgx6@mail.missouri.edu
+            </div>
+            <div class="footer-phone"><img src="images/icons8-phone-50.png" 
+                                           width="20"
+                                           height="20"
+                                           title="Icon from icons8.com">(573) 123-4567
+            </div>
+            <div class="footer-date">© Adam Hemmann 2026</div>
         </footer>
     </body>
 </html>
