@@ -45,7 +45,7 @@ Begin styles for page hero sections
     display: flex;
     background-size: cover;
     background-position: center;
-    min-height: 25rem;
+    min-height: 40rem;
     padding-top: 10rem;
     padding-left: 5rem;
     flex-direction: column;
@@ -60,14 +60,16 @@ Begin styles for page hero sections
 }
 .hero-text h1,
 .hero-text h2 {
-    font-family: Montserrat;
+    /* Custom font Montserrat from Google Fonts with fallback */
+    font-family: Montserrat, sans-serif;
 }
 .hero-text h2 {
     font-weight: 600;
     max-width: fit-content;
 }
 .hero-text p {
-    font-family: Open Sans;
+    /* Custom font Open Sans from Google Fonts with fallback */
+    font-family: Open Sans, sans-serif;
 }
 .career-hero .hero-text,
 .contact-page-hero .hero-text,
@@ -88,7 +90,8 @@ Begin styles for page hero sections
     font-size: large;
 }
 .image-credit {
-    font-family: Open Sans;
+    /* Custom font Open Sans from Google Fonts with fallback */
+    font-family: Open Sans, sans-serif;
     color: #4B688A;
     font-size: xx-small;
     text-align: right;
@@ -118,6 +121,7 @@ Begin index.html styles
     padding: 1.2rem 2.4rem;
     width: 15rem;
     background-color: #FFFFFF;
+    /* Custom font Montserrat from Google Fonts with fallback */
     font-family: Montserrat, sans-serif;
     font-weight: bold;
     border-radius: 4px;
@@ -141,7 +145,8 @@ Begin index.html styles
     text-align: center;
 }
 .fav-quote-container blockquote h1 {
-    font-family: Open Sans;
+    /* Custom font Open Sans from Google Fonts with fallback */
+    font-family: Open Sans, sans-serif;
     font-size: x-large;
     font-weight: 400;
     font-style: italic;
@@ -161,45 +166,6 @@ Begin index.html styles
     font-size: 1.6rem;
     color: #4B688A;
     font-weight: 400;
-}
-
-/*
-Begin reflection.html styles 
-*/
-.reflect-hero {
-    background-image: 
-        linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(31, 59, 91, 0.9) 100%),
-        url("images/reflectionhero.png");
-}
-.personal-reflection-container {
-    max-width: 90rem;
-    margin: 3rem auto;
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-}
-.personal-reflection-container h1 {
-    color: #1F3B5B;
-    font-family: Montserrat;
-    font-size: 2rem;
-    align-self: center;
-    margin: 0;
-}
-.personal-reflection-container p {
-    color: #4B688A;
-    font-family: Open Sans;
-    margin-top: 1rem;
-}
-    /* pseudo-classes/elements */
-.personal-reflection-container p:first-of-type::first-letter {
-    font-size: 250%;
-    font-family: Montserrat;
-    font-weight: 600;
-}
-.personal-reflection-container p:nth-of-type(2),
-.personal-reflection-container p:nth-of-type(3),
-.personal-reflection-container p:nth-of-type(4) {
-    text-indent: 2em;
 }
 
 /* 
@@ -232,11 +198,15 @@ Begin about.html styles
 }
 .bio-content h1,
 .career-overview-content h1 {
+    /* Custom font Montserrat from Google Fonts with fallback */
     font-family: Montserrat, sans-serif;
-    text-align: center;
+    text-align: left;
+    /* Custom styles for h1 elements */
+    text-decoration: underline;
 }
 .bio-content p,
 .career-overview-content p {
+    /* Custom font Open Sans from Google Fonts with fallback */
     font-family: Open Sans, sans-serif;
     max-width: 60rem;
     margin: 0;
@@ -301,7 +271,8 @@ Begin about.html styles
     align-items: center;
     padding: 1.2rem 2.4rem;
     background-color: #E9EEF4;
-    font-family: Montserrat;
+    /* Custom font Montserrat from Google Fonts with fallback */
+    font-family: Montserrat, sans-serif;
     font-weight: bold;
     border-radius: 4px;
     transition: transform 0.2s ease;
@@ -327,6 +298,7 @@ Begin about.html styles
 }
 .career-overview-table-container caption {
     font-size: x-large;
+    /* Custom font Open Sans from Google Fonts with fallback */
     font-family: Open Sans, sans-serif;
     color: #1F3B5B;
     text-align: center;
@@ -334,6 +306,7 @@ Begin about.html styles
 .career-overview-table {
     width: 100%;
     border-collapse: collapse;
+    /* Custom font Open Sans from Google Fonts with fallback */
     font-family: Open Sans, sans-serif;
     color: #1F3B5B;
     border: 1px solid #1F3B5B;
@@ -347,6 +320,7 @@ Begin about.html styles
     vertical-align: top;
 }
 .career-overview-table tr {
+    /* Custom font Open Sans from Google Fonts with fallback */
     font-family: Open Sans, sans-serif;
     color: #1F3B5B;
 }
@@ -364,93 +338,6 @@ Begin about.html styles
     }
 }
 
-/* 
-Begin contact.html styles 
-*/
-.contact-page-hero {
-    background-image: 
-        linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(31, 59, 91, 0.9) 100%),
-        url("images/contacthero.png");
-}
-.contact-page-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
-.quick-contact-info-container {
-   font-family: Open Sans, sans-serif;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   padding: 2rem;
-}
-.quick-contact-info-container p {
-    color: #1F3B5B;
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-.quick-contact-info-container p:nth-of-type(even) {
-    text-indent: 2em;
-    font-weight: 400;
-}
-.contact-form-container {
-    min-height: 500px;
-    background-color: #E9EEF4;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.contact-form-container h1 {
-    font-family: Montserrat, sans-serif;
-}
-.contact-form-container label,
-.contact-form-container p {
-    font-family: Open Sans,sans-serif;
-}
-.contact-form {
-    display: flex;
-    flex-direction: column;    
-    gap: 1.5rem;
-    align-items: center;
-}
-.contact-form .form-row-names,
-.contact-form .form-row-email,
-.contact-form .form-row-message {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    width: 100%;
-}
-.form-row-message > div {
-    width: 100%;
-}
-.form-row-howfind > div {
-    display: flex;
-    align-items: center;
-}
-.contact-form #form-message {
-    display: block;
-    width: 100%;
-    min-height: 15rem;
-    resize: vertical;
-}
-.form-radio-label {
-    text-align: center;
-    color: #ff4d4d;
-}
-    /* All required form fields will have a red border */
-input:required,
-textarea:required,
-select:required {
-  border: 2px solid #ff4d4d;
-}
-.form-required-label {
-    color: #ff4d4d;
-}
-
 /*
 Begin career.html styles 
 */
@@ -460,17 +347,22 @@ Begin career.html styles
         url("images/careerhero.png");
 }
 .career-journey {
+    /* Custom font Open Sans from Google Fonts with fallback */
     font-family: Open Sans, sans-serif;
     padding: 3rem 10rem;
 }
 .career-journey h1 {
     font-size: x-large;
     color: #1F3B5B;
+    /* Custom style for h1 elements */
+    text-shadow: 2px 2px 3px #4B688A;
 }
 .career-journey h2 {
     font-size: large;
     font-weight: 400;
     color: #4B688A;
+    /* Custom style for h2 elements */
+    text-decoration: underline;
 }
 .career-journey-list li {
     font-size: 1.6rem;
@@ -603,6 +495,138 @@ Begin career.html styles
 }
 
 /*
+Begin reflection.html styles 
+*/
+.reflect-hero {
+    background-image: 
+        linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(31, 59, 91, 0.9) 100%),
+        url("images/reflectionhero.png");
+}
+.personal-reflection-container {
+    max-width: 90rem;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.personal-reflection-container h1 {
+    color: #1F3B5B;
+    /* Custom font Montserrat from Google Fonts with fallback */
+    font-family: Montserrat, sans-serif;
+    font-size: 2rem;
+    align-self: center;
+    margin: 0;
+}
+.personal-reflection-container p {
+    color: #4B688A;
+    /* Custom font Open Sans from Google Fonts with fallback */
+    font-family: Open Sans, sans-serif;
+    margin-top: 1rem;
+}
+    /* pseudo-classes/elements */
+.personal-reflection-container p:first-of-type::first-letter {
+    font-size: 250%;
+    /* Custom font Montserrat from Google Fonts with fallback */
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+}
+.personal-reflection-container p:nth-of-type(2),
+.personal-reflection-container p:nth-of-type(3),
+.personal-reflection-container p:nth-of-type(4) {
+    text-indent: 2em;
+}
+
+/* 
+Begin contact.html styles 
+*/
+.contact-page-hero {
+    background-image: 
+        linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(31, 59, 91, 0.9) 100%),
+        url("images/contacthero.png");
+}
+.contact-page-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.quick-contact-info-container {
+    /* Custom font Open Sans from Google Fonts with fallback */
+   font-family: Open Sans, sans-serif;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 2rem;
+}
+.quick-contact-info-container p {
+    color: #1F3B5B;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.quick-contact-info-container p:nth-of-type(even) {
+    text-indent: 2em;
+    font-weight: 400;
+}
+.contact-form-container {
+    min-height: 500px;
+    background-color: #E9EEF4;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-form-container h1 {
+    /* Custom font Montserrat from Google Fonts with fallback */
+    font-family: Montserrat, sans-serif;
+}
+.contact-form-container label,
+.contact-form-container p {
+    /* Custom font Open Sans from Google Fonts with fallback */
+    font-family: Open Sans,sans-serif;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;    
+    gap: 1.5rem;
+    align-items: center;
+}
+.contact-form .form-row-names,
+.contact-form .form-row-email,
+.contact-form .form-row-message {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+}
+.form-row-message > div {
+    width: 100%;
+}
+.form-row-howfind > div {
+    display: flex;
+    align-items: center;
+}
+.contact-form #form-message {
+    display: block;
+    width: 100%;
+    min-height: 15rem;
+    resize: vertical;
+}
+.form-radio-label {
+    text-align: center;
+    color: #ff4d4d;
+}
+    /* All required form fields will have a red border */
+input:required,
+textarea:required,
+select:required {
+  border: 2px solid #ff4d4d;
+}
+.form-required-label {
+    color: #ff4d4d;
+}
+
+/*
 Begin footer styles 
 */
 .footer * {
@@ -612,6 +636,7 @@ Begin footer styles
     display: flex;
     justify-content: space-around;
     align-items: center;
+    /* Custom font Open Sans from Google Fonts with fallback */
     font-family: Open Sans, sans-serif;
     background-color: #4B688A;
 }

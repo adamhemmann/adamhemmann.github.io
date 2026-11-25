@@ -20,6 +20,7 @@
     list-style: none;
 }
 .nav-link a {
+    /* Custom font Open Sans from Google Fonts */
     font-family: Open Sans;
     font-size: 1.6rem;
     color: #4B688A;
@@ -34,6 +35,7 @@
     border-bottom-color: #1F3B5B;
 }
 .nav-dropdown li {
+    /* Custom font Open Sans from Google Fonts */
     font-family: Open Sans;
     color: #4B688A;
     text-decoration: none;
