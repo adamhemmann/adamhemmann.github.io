@@ -35,8 +35,8 @@
     border-bottom-color: #1F3B5B;
 }
 .nav-dropdown li {
-    /* Custom font Open Sans from Google Fonts */
-    font-family: Open Sans;
+    /* Custom font Open Sans from Google Fonts with fallback */
+    font-family: Open Sans, sans-serif;
     color: #4B688A;
     text-decoration: none;
     transition: background-color 0.3s ease-in;
